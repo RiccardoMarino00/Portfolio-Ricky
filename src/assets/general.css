@@ -1,0 +1,22 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    /* overflow-x: hidden; */
+}
+
+a {
+    color: currentColor;
+    text-decoration: none;
+}
+
+ul, li, ol, menu {
+    color: currentColor;
+    list-style: none;
+    padding: 0;
+}
+
+.red-txt {
+    color: #FF4E47;
+}
