@@ -154,15 +154,11 @@
 }
 
 .presentation {
-    /* position: absolute;
-    top: 89%; */
-    /* border-top: 2px inset rgb(56, 55, 55); */
     text-align: center;
 }
 
 
 .presentation-content {
-    /* max-width: 700px; */
     width: 100%;
     text-align: center;
     margin: 0 auto;
@@ -199,11 +195,6 @@
     left: 0;
     margin-bottom: -40px;
 }
-
-/* .logo-programming {
-    width: 700px;
-    aspect-ratio: 1/1;
-} */
 
 .programming-div {
     height: 775px;
@@ -272,9 +263,6 @@
     }
 
     .presentation {
-        /* position: absolute;
-    top: 89%; */
-        /* border-top: 2px inset rgb(56, 55, 55); */
         text-align: center;
     }
 
@@ -317,20 +305,6 @@
         left: 0;
         margin-bottom: -40px;
     }
-
-    /* .logo-programming {
-    width: 700px;
-    aspect-ratio: 1/1;
-} */
-
-    /* .programming-div {
-        height: 775px;
-        width: 100%;
-        background-image: url('./icons/Programing2.png');
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: contain;
-    } */
 
     .logo-programming {
         position: relative;
@@ -380,9 +354,6 @@
     }
 
     .presentation {
-        /* position: absolute;
-    top: 89%; */
-        /* border-top: 2px inset rgb(56, 55, 55); */
         text-align: center;
     }
 
@@ -426,23 +397,9 @@
         margin-bottom: -40px;
     }
 
-    /* .logo-programming {
-    width: 700px;
-    aspect-ratio: 1/1;
-} */
-
-    /* .programming-div {
-        height: 775px;
-        width: 100%;
-        background-image: url('./icons/Programing2.png');
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: contain;
-    } */
-
     .logo-programming {
         position: relative;
-        left: 25px;
+        left: 20px;
     }
 
     .presentation-img {

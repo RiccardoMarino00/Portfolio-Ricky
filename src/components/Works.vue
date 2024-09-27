@@ -8,40 +8,34 @@
                 <img class="img-hover" src="./icons/DiscordHoverDef2.png" alt="" loading="lazy">
                 <button>Visit Detailed page</button>
             </article>
+
             <article>
                 <img class="img-article" src="./icons/Avada.png" alt="" loading="lazy">
                 <img class="img-hover" src="./icons/AvadaHoverDef5.png" alt="" loading="lazy">
                 <button>Visit Detailed page</button>
-
-
             </article>
             <article>
                 <img class="img-article" src="./icons/Ricky Sfondi_Tavola disegno 1-02.png" alt="" loading="lazy">
                 <img class="img-hover" src="./icons/Discord.png" alt="" loading="lazy">
                 <button>Visit Detailed page</button>
-
-
             </article>
+
             <article>
                 <img class="img-article" src="./icons/dungeon-work.png" alt="" loading="lazy">
                 <img class="img-hover" src="./icons/DD.png" alt="" loading="lazy">
                 <button>Visit Detailed page</button>
-
-
             </article>
+
             <article>
                 <img class="img-article" src="./icons/BookaRicc.png" alt="" loading="lazy">
                 <img class="img-hover" src="./icons/Booka.png" alt="" loading="lazy">
                 <button>Visit Detailed page</button>
-
-
             </article>
+
             <article>
                 <img class="img-article" src="./icons/marvel-work.png" alt="">
                 <img class="img-hover" src="./icons/marvel.png" alt="">
                 <button>Visit Website</button>
-
-
             </article>
         </div>
         <div class="space-div"></div>
@@ -109,9 +103,6 @@ article {
     width: 100%;
     height: 230px;
     border-radius: 10px;
-    /* box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px; */
-    /* box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset; */
-    /* box-shadow: rgba(0, 0, 0, 0.25) 0px 0.0625em 0.0625em, rgba(0, 0, 0, 0.25) 0px 0.125em 0.5em, rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset; */
     box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
 }
 
@@ -148,10 +139,7 @@ article button {
     transition: background-color 0.5s ease;
 }
 
-/* article button:hover {
-    background-color: #FF4E47;
-    border: none;
-} */
+
 
 article:hover button {
     display: block;
@@ -187,23 +175,8 @@ article button::before {
 
 article button {
     position: relative;
-    /* font-size: 5rem; */
 }
 
-/* html {
-    block-size: 100%;
-    inline-size: 100%;
-}
-
-body {
-    min-block-size: 100%;
-    min-inline-size: 100%;
-    margin: 0;
-    box-sizing: border-box;
-    display: grid;
-    place-content: center;
-    font-family: system-ui, sans-serif;
-} */
 
 @media (orientation: landscape) {
     body {
@@ -273,7 +246,6 @@ body {
         width: 100%;
         height: 230px;
         border-radius: 10px;
-        /* box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px; */
         box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
     }
 
@@ -358,7 +330,6 @@ body {
         width: 100%;
         height: 230px;
         border-radius: 10px;
-        /* box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px; */
         box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
     }
 

@@ -2,7 +2,6 @@
     <div class="skills-container">
         <div class="row-skills">
             <div class="column">
-                <!-- <img class="img-front" src="./icons/Smartphone-UI-UX-designing.png" alt=""> -->
                 <svg class="img-front" viewBox="-7.3 -7.3 87.60 87.60" version="1.1" xmlns="http://www.w3.org/2000/svg"
                     xmlns:xlink="http://www.w3.org/1999/xlink" fill="#000000" transform="rotate(0)">
                     <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
@@ -192,7 +191,6 @@
 
             </div>
             <div class="column">
-                <!-- <img class="img-front" src="./icons/Smartphone-UI-UX-designing.png" alt=""> -->
                 <svg class="img-front" viewBox="-7.3 -7.3 87.60 87.60" version="1.1" xmlns="http://www.w3.org/2000/svg"
                     xmlns:xlink="http://www.w3.org/1999/xlink" fill="#000000" transform="rotate(0)">
                     <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
@@ -375,9 +373,7 @@
                     <p class="red-txt">Language:</p>
                     <p>MySQL, PHP, Laravel, JavaScript</p>
                 </div>
-                <!-- <span class="orange-block"></span>  -->
-                <!-- <span class="orange-block-sm"></span>
-                <span class="orange-block-sm2"></span> -->
+
             </div>
         </div>
     </div>
@@ -400,40 +396,8 @@
 .row-skills {
     display: flex;
     text-align: center;
-    /* gap: 100px;  */
 }
 
-/* .column-back {
-    width: 100%;
-    height: 600px;
-    flex-grow: 1;
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    border-top-right-radius: 20px;
-    border-bottom-right-radius: 20px;
-    border-bottom: 5px solid #FF4E47;
-    border-right: 5px solid #FF4E47;
-    border-left: 5px solid #FF4E47;
-
-}
-
-.column-front {
-    width: 100%;
-    height: 600px;
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    border-top-left-radius: 20px;
-    border-bottom-left-radius: 20px;
-    border-bottom: 5px solid #FF4E47;
-    border-left: 5px solid #FF4E47;
-    border-right: 5px solid #FF4E47;
-
-
-} */
 
 .column {
     flex-grow: 1;
@@ -457,15 +421,6 @@
 }
 
 
-
-/* .orange-block {
-    width: 100px;
-    height: 122px;
-    background-color: #FF4E47;
-    position: absolute;
-    bottom: 523px;
-    right: 400px;
-} */
 
 
 
@@ -585,8 +540,6 @@
         border-radius: 20px;
         top: -96px;
         box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-
-
     }
 }
 </style>

@@ -1,12 +1,7 @@
-<script>
-
-</script>
-
 <template>
     <footer>
         <div class="button-div">
             <a class="see-more-button" href="#">See more on GitHub</a>
-
         </div>
         <div class="container">
             <img src="./icons/logo-white.png" alt="">
@@ -15,17 +10,16 @@
                 <li>
                     <a href="https://www.linkedin.com/in/riccardo-marino-149115315/"><font-awesome-icon
                             class="social-icon" :icon="['fab', 'linkedin-in']" /></a>
-
                 </li>
+
                 <li>
                     <a href="https://github.com/RiccardoMarino00"><font-awesome-icon class="social-icon"
                             :icon="['fab', 'github']" /></a>
-
                 </li>
+
                 <li>
                     <a href="mailto:riccardo.marino09@gmail.com"><font-awesome-icon class="social-icon"
                             :icon="['fas', 'envelope']" /></a>
-
                 </li>
             </ul>
         </div>
@@ -51,13 +45,11 @@
     width: 57px;
     height: 55px;
     position: relative;
-    /* left: 20px; */
 }
 
 ul {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    /* width: 20rem; */
     margin: 0 auto;
 }
 
@@ -123,7 +115,6 @@ ul li:hover .social-icon {
     ul {
         display: grid;
         grid-template-columns: repeat(1, 1fr);
-        /* width: 6rem; */
         margin: 0 auto;
     }
 

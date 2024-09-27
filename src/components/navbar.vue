@@ -79,7 +79,7 @@ nav {
 
 /*---------------------------- RESPONSIVE TABLET---------------------------------- */
 
-@media (min-width: 768px) and (max-width: 992px) {
+@media screen and (max-width: 992px) {
     nav {
         height: 90px;
         padding: 20px 0 20px 0;
