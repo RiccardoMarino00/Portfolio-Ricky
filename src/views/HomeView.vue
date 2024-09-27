@@ -16,13 +16,21 @@ export default {
     data() {
         return {
             loading: true,
+            isFading: true,
 
         };
     },
     mounted() {
         setTimeout(() => {
             this.loading = false;
+
+            setTimeout(() => {
+                this.isFading = false;
+            }, 500);
+
         }, 3000);
+
+
     },
 };
 </script>
@@ -40,7 +48,7 @@ export default {
             <div class="bar bar8"></div>
         </div>
     </div>
-    <div v-else>
+    <div v-else class="content">
         <Navbar />
         <Hero />
         <Skills />
@@ -116,5 +124,21 @@ export default {
         transform: scaleY(0.1);
         background: transparent;
     }
+}
+
+
+
+@keyframes slideInLeft {
+    0% {
+        transform: translateX(-100%);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+.content {
+    animation: 1s ease-out 0s 1 slideInLeft;
 }
 </style>
