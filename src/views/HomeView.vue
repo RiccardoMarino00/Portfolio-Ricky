@@ -36,7 +36,7 @@ export default {
 </script>
 
 <template>
-    <!-- <div v-if="loading" class="loading-screen">
+    <div v-if="loading" class="loading-screen">
         <div class="middle">
             <div class="bar bar1"></div>
             <div class="bar bar2"></div>
@@ -47,18 +47,18 @@ export default {
             <div class="bar bar7"></div>
             <div class="bar bar8"></div>
         </div>
-    </div> -->
-    <!-- <div v-else class="content"> -->
-    <Navbar />
-    <Hero />
-    <Skills />
-    <Works />
-    <Footer />
-    <!-- </div> -->
+    </div>
+    <div v-else class="content">
+        <Navbar />
+        <Hero />
+        <Skills />
+        <Works />
+        <Footer />
+    </div>
 </template>
 
 <style scoped>
-/* .middle {
+.middle {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -73,7 +73,7 @@ export default {
     transform-origin: bottom center;
     border-top-right-radius: 20px;
     border-top-left-radius: 20px;
-      box-shadow:5px 10px 20px inset rgba(255,23,25.2);
+    /* box-shadow: 5px 10px 20px inset rgba(255, 23, 25.2); */
     animation: loader 1.2s linear infinite;
 }
 
@@ -112,7 +112,7 @@ export default {
 @keyframes loader {
     0% {
         transform: scaleY(0.1);
-        background: ;
+        /* background: ; */
     }
 
     50% {
@@ -140,5 +140,5 @@ export default {
 
 .content {
     animation: 1s ease-out 0s 1 slideInLeft;
-} */
+}
 </style>
