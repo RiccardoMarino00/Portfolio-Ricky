@@ -1,3 +1,9 @@
+<script>
+
+
+</script>
+
+
 <template>
     <div class="works-container">
         <h3>My Works</h3>
@@ -6,36 +12,30 @@
             <article>
                 <img class="img-article" src="./icons/DiscordRicca.png" alt="" loading="lazy">
                 <img class="img-hover" src="./icons/DiscordHoverDef2.png" alt="" loading="lazy">
-                <button>Visit Detailed page</button>
+                <router-link class="router" to="/detailed-booka">Visit Detailed Page</router-link>
             </article>
 
             <article>
                 <img class="img-article" src="./icons/Avada.png" alt="" loading="lazy">
                 <img class="img-hover" src="./icons/AvadaHoverDef5.png" alt="" loading="lazy">
-                <button>Visit Detailed page</button>
+                <router-link class="router" to="/detailed-booka">Visit Detailed Page</router-link>
             </article>
             <article>
                 <img class="img-article" src="./icons/Ricky Sfondi_Tavola disegno 1-02.png" alt="" loading="lazy">
-                <img class="img-hover" src="./icons/Discord.png" alt="" loading="lazy">
-                <button>Visit Detailed page</button>
+                <img class="img-hover" src="./icons/Ricky Sfondi_Tavola disegno 1-02.png" alt="" loading="lazy">
+                <router-link class="router" to="/detailed-booka">Visit Detailed Page</router-link>
             </article>
 
             <article>
                 <img class="img-article" src="./icons/dungeon-work.png" alt="" loading="lazy">
                 <img class="img-hover" src="./icons/DD.png" alt="" loading="lazy">
-                <button>Visit Detailed page</button>
-            </article>
-
-            <article>
-                <img class="img-article" src="./icons/BookaRicc.png" alt="" loading="lazy">
-                <img class="img-hover" src="./icons/Booka.png" alt="" loading="lazy">
-                <button>Visit Detailed page</button>
+                <router-link class="router" to="/detailed-booka">Visit Detailed Page</router-link>
             </article>
 
             <article>
                 <img class="img-article" src="./icons/marvel-work.png" alt="">
                 <img class="img-hover" src="./icons/marvel.png" alt="">
-                <button>Visit Website</button>
+                <router-link class="router" to="/detailed-booka">Visit Detailed Page</router-link>
             </article>
         </div>
         <div class="space-div"></div>
@@ -139,26 +139,42 @@ article button {
     transition: background-color 0.5s ease;
 }
 
+.router {
+    display: none;
+    position: relative;
+    left: 50%;
+    bottom: 50px;
+    transform: translate(-50%, -50%);
+    padding: 0.5rem;
+    width: 10rem;
+    border-radius: 10px;
+    border: 1px solid white;
+    background-color: transparent;
+    color: white;
+    font-size: 0.9rem;
+    transition: background-color 0.5s ease;
+}
 
 
-article:hover button {
+
+article:hover .router {
     display: block;
 }
 
-article button::before {
+article .router::before {
     transform: scaleX(0);
     transform-origin: bottom right;
     border-radius: 10px;
 
 }
 
-article button:hover::before {
+article .router:hover::before {
     transform: scaleX(1);
     transform-origin: bottom left;
 
 }
 
-article button::before {
+article .router::before {
     content: " ";
     display: block;
     position: absolute;
@@ -168,12 +184,12 @@ article button::before {
     bottom: 0;
     left: 0;
     inset: 0 0 0 0;
-    background: rgba(255, 78, 71, 0.7);
+    background: rgb(255, 78, 71);
     z-index: -1;
     transition: transform .3s ease;
 }
 
-article button {
+article .router {
     position: relative;
 }
 

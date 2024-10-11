@@ -3,6 +3,7 @@ import './assets/general.css'
 import { createApp } from 'vue'
 import App from './App.vue'
 import router from './router'
+import { createMemoryHistory, createRouter } from 'vue-router'
 
 /* import the fontawesome core */
 import { library } from '@fortawesome/fontawesome-svg-core'

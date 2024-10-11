@@ -1,7 +1,7 @@
 <template>
     <footer>
         <div class="button-div">
-            <a class="see-more-button" href="#">See more on GitHub</a>
+            <router-link to="/slider-works" class="see-more-button">See more</router-link>
         </div>
         <div class="container">
             <img src="./icons/logo-white.png" alt="">

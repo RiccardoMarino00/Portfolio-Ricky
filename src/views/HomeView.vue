@@ -5,6 +5,7 @@ import Skills from '@/components/Skills.vue';
 import Works from '@/components/Works.vue';
 import Footer from '@/components/Footer.vue';
 
+
 export default {
     components: {
         Navbar,
@@ -21,14 +22,29 @@ export default {
         };
     },
     mounted() {
-        setTimeout(() => {
-            this.loading = false;
+        // setTimeout(() => {
+        //     this.loading = false;
 
+        //     setTimeout(() => {
+        //         this.isFading = false;
+        //     }, 500);
+
+        // }, 3000);
+        if (!sessionStorage.getItem('hasVisited')) {
             setTimeout(() => {
-                this.isFading = false;
-            }, 500);
+                this.loading = false;
 
-        }, 3000);
+                setTimeout(() => {
+                    this.isFading = false;
+                }, 500);
+
+                sessionStorage.setItem('hasVisited', 'true');
+            }, 2500);
+
+        } else {
+            this.loading = false;
+            this.isFading = false;
+        }
 
 
     },
