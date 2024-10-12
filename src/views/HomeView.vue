@@ -73,11 +73,11 @@ export default {
                 <div class="circle"></div>
             </div>
         </div>
-        <div v-else class="content">
-            <Navbar />
-            <Hero />
-            <Skills />
-            <Works />
+        <div v-else class="content view">
+            <Navbar class="block" />
+            <Hero class="block" />
+            <Skills class="block" />
+            <Works class="block" />
             <Footer />
         </div>
     </div>
@@ -85,6 +85,27 @@ export default {
 </template>
 
 <style scoped>
+@keyframes appear {
+    from {
+        opacity: 0;
+        scale: 0.5;
+        clip-path: inset(100% 100% 0 0);
+    }
+
+    to {
+        opacity: 1;
+        scale: 1;
+        clip-path: inset(0 0 0 0);
+
+    }
+}
+
+.block {
+    animation: appear linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 30%;
+}
+
 /* .middle {
     top: 50%;
     left: 50%;

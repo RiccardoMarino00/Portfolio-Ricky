@@ -11,7 +11,7 @@
 
                 <div class="link-nav">
                     <a href="mailto:riccardo.marino09@gmail.com" class="contact-me">Contact me!</a>
-                    <a class="link">Linkk</a>
+                    <a class="link"></a>
                 </div>
             </div>
 

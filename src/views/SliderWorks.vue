@@ -1,29 +1,27 @@
 <script>
 export default {
     data() {
+
         return {
             sliderList: null,
             thumbnailItems: [],
             slider: null,
             thumbNail: null,
+            currentIndex: 0,
         }
     },
     mounted() {
+
+        // assicuro che il DOM sia completamente caricato prima di eseguire
         this.$nextTick(() => {
 
-            this.slider = this.$el;
-
-
+            this.slider = this.$el; //elemento radice (slider)
             this.sliderList = this.slider.querySelector('.list');
             this.thumbNail = this.$el.querySelector('.thumbnail');
+            // this.thumbnailItems = this.thumbNail.querySelectorAll('.item');
+            this.thumbnailItems = this.$el.querySelectorAll('.thumbnail .item');
 
-            this.thumbnailItems = this.thumbNail.querySelectorAll('.item');
-            // if (this.thumbnailItems.length > 0) {
-            //     thumbNail.appendChild(this.thumbnailItems[0]);
-            // } else {
-            //     console.error('Nessun elemento .item trovato in thumbnail');
-            // }
-
+            //sposta la prima miniatura in fondo
             this.thumbNail.appendChild(this.thumbnailItems[0]);
         })
 
@@ -33,67 +31,89 @@ export default {
 
 
     },
+    computed: {
+
+        orderedThumbnails() {
+        }
+
+    },
     methods: {
+
         moveSlider(direction) {
+
+            // let sliderItems = this.sliderList.querySelectorAll('.item');
+
+            // if (direction === 'next') { //se viene cliccato bottone next
+            //     const firstSliderItem = sliderItems[0];
+            //     const firstThumbnailItem = this.thumbnailItems[1];
+            //     console.log(firstThumbnailItem)
+
+            //     this.sliderList.appendChild(firstSliderItem); //sposta il primo elemento slider alla fine
+
+            //     const currentVisibleThumbnail = this.thumbnailItems[0];
+            //     console.log(currentVisibleThumbnail)
+            //     this.thumbNail.appendChild(currentVisibleThumbnail); //sposta miniatura corrente alla fine
+
+            //     this.thumbNail.insertBefore(firstThumbnailItem, this.thumbNail.firstChild); //inserisce prossima miniatura all'inizio
+            //     console.log(this.thumbNail);
+            //     // aggiorna la lista delle miniature
+            //     this.thumbnailItems = this.thumbNail.querySelectorAll('.item');
+            //     this.slider.classList.add('next');
+
+            // } else {
+
+            //     // se bottone prev viene cliccato
+            //     const lastSliderItem = sliderItems[sliderItems.length - 1];
+            //     const lastThumbnailItem = this.thumbnailItems[this.thumbnailItems.length - 2];
+
+            //     this.sliderList.prepend(lastSliderItem); //sposta ultimo elemento slider all'inizio
+            //     const currentLastThumbnail = this.thumbnailItems[this.thumbnailItems.length - 1];
+            //     this.thumbNail.prepend(currentLastThumbnail); //sposta l'ultima miniatura all'inizio
+
+            //     // // Sposta la penultima miniatura nella prima posizione
+            //     this.thumbNail.insertBefore(lastThumbnailItem, this.thumbNail.firstChild);
+
+            //     // Aggiorna la lista delle miniature 
+            //     this.thumbnailItems = this.thumbNail.querySelectorAll('.item');
+            //     this.slider.classList.add('prev')
+            // }
+
+            // // Rimuove la classe di animazione dopo il termine dell'animazione
+            // this.slider.addEventListener('animationend', () => {
+
+            //     if (direction === 'next') {
+
+            //         this.slider.classList.remove('next');
+
+            //     } else {
+
+            //         this.slider.classList.remove('prev');
+            //     }
+
+
+            // }, { once: true }) // L'evento è gestito una sola volta
+
             let sliderItems = this.sliderList.querySelectorAll('.item');
-            // let thumbnailItems = this.thumbNail.querySelectorAll(' .item')
-            // let thumbNail = this.$el.querySelector('.thumbnail');
-            console.log('Moving slider', direction);
 
             if (direction === 'next') {
-                // console.log('Slider item to move:', sliderItems[0].innerHTML);
-                // console.log('Thumbnail item to move:', this.thumbnailItems[0].innerHTML);
-                const firstSliderItem = sliderItems[0];
-                const firstThumbnailItem = this.thumbnailItems[1];
-
-                this.sliderList.appendChild(firstSliderItem);
-
-                const currentVisibleThumbnail = this.thumbnailItems[0];
-                this.thumbNail.appendChild(currentVisibleThumbnail);
-
-                this.thumbNail.insertBefore(firstThumbnailItem, this.thumbNail.firstChild);
-
-                // Update the thumbnail items after reordering
-                this.thumbnailItems = this.thumbNail.querySelectorAll('.item');
-                this.slider.classList.add('next');
+                this.sliderList.appendChild(sliderItems[0])
+                this.thumbNail.appendChild(this.thumbnailItems[0])
+                console.log('this.slider', this.slider)
+                this.slider.classList.add('next')
             } else {
-                // let lastSliderItem = sliderItems[sliderItems.length - 1];
-                // let lastThumbnailItem = this.thumbnailItems[this.thumbnailItems.length - 1];
-
-                // this.sliderList.insertBefore(lastSliderItem, sliderItems[0]);
-                // thumbNail.insertBefore(lastThumbnailItem, this.thumbnailItems[0]);
-
-                // this.slider.classList.add('prev')
-
-                // console.log('Slider item to move:', sliderItems[sliderItems.length - 1].innerHTML);
-                // console.log('Thumbnail item to move:', this.thumbnailItems[this.thumbnailItems.length - 1].innerHTML);
-
-                const lastSliderItem = sliderItems[sliderItems.length - 1];
-                const lastThumbnailItem = this.thumbnailItems[this.thumbnailItems.length - 2];
-
-                this.sliderList.prepend(lastSliderItem);
-
-                const currentLastThumbnail = this.thumbnailItems[this.thumbnailItems.length - 1];
-                this.thumbNail.prepend(currentLastThumbnail);
-                // this.thumbnailItems.unshift(this.thumbnailItems.pop());
-
-                // Move the second last thumbnail to the first position
-                this.thumbNail.insertBefore(lastThumbnailItem, this.thumbNail.firstChild);
-
-                this.thumbnailItems = this.thumbNail.querySelectorAll('.item');
+                this.sliderList.prepend(sliderItems[sliderItems.length - 1])
+                this.thumbNail.prepend(this.thumbnailItems[this.thumbnailItems.length - 1])
                 this.slider.classList.add('prev')
             }
 
-
             this.slider.addEventListener('animationend', () => {
                 if (direction === 'next') {
-                    this.slider.classList.remove('next');
+                    this.slider.classList.remove('next')
                 } else {
-                    this.slider.classList.remove('prev');
+                    this.slider.classList.remove('prev')
                 }
+            }, { once: true });
 
-
-            }, { once: true })
         }
     }
 

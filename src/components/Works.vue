@@ -12,30 +12,30 @@
             <article>
                 <img class="img-article" src="./icons/DiscordRicca.png" alt="" loading="lazy">
                 <img class="img-hover" src="./icons/DiscordHoverDef2.png" alt="" loading="lazy">
-                <router-link class="router" to="/detailed-booka">Visit Detailed Page</router-link>
+                <router-link class="router" to="/slider-works">Visit Detailed Page</router-link>
             </article>
 
             <article>
                 <img class="img-article" src="./icons/Avada.png" alt="" loading="lazy">
                 <img class="img-hover" src="./icons/AvadaHoverDef5.png" alt="" loading="lazy">
-                <router-link class="router" to="/detailed-booka">Visit Detailed Page</router-link>
+                <router-link class="router" to="/slider-works">Visit Detailed Page</router-link>
             </article>
             <article>
                 <img class="img-article" src="./icons/Ricky Sfondi_Tavola disegno 1-02.png" alt="" loading="lazy">
                 <img class="img-hover" src="./icons/Ricky Sfondi_Tavola disegno 1-02.png" alt="" loading="lazy">
-                <router-link class="router" to="/detailed-booka">Visit Detailed Page</router-link>
+                <router-link class="router" to="/slider-works">Visit Detailed Page</router-link>
             </article>
 
             <article>
                 <img class="img-article" src="./icons/dungeon-work.png" alt="" loading="lazy">
                 <img class="img-hover" src="./icons/DD.png" alt="" loading="lazy">
-                <router-link class="router" to="/detailed-booka">Visit Detailed Page</router-link>
+                <router-link class="router" to="/slider-works">Visit Detailed Page</router-link>
             </article>
 
             <article>
                 <img class="img-article" src="./icons/marvel-work.png" alt="">
                 <img class="img-hover" src="./icons/marvel.png" alt="">
-                <router-link class="router" to="/detailed-booka">Visit Detailed Page</router-link>
+                <router-link class="router" to="/slider-works">Visit Detailed Page</router-link>
             </article>
         </div>
         <div class="space-div"></div>
