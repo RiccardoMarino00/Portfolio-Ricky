@@ -11,7 +11,6 @@ export default {
         }
     },
     mounted() {
-
         // assicuro che il DOM sia completamente caricato prima di eseguire
         this.$nextTick(() => {
 
@@ -20,26 +19,42 @@ export default {
             this.thumbNail = this.$el.querySelector('.thumbnail');
             // this.thumbnailItems = this.thumbNail.querySelectorAll('.item');
             this.thumbnailItems = this.$el.querySelectorAll('.thumbnail .item');
-
+            console.log(this.thumbnailItems);
             //sposta la prima miniatura in fondo
+
             this.thumbNail.appendChild(this.thumbnailItems[0]);
         })
 
-
-
-
-
-
     },
-    computed: {
 
-        orderedThumbnails() {
-        }
-
-    },
     methods: {
 
         moveSlider(direction) {
+
+            let sliderItems = this.sliderList.querySelectorAll('.item');
+            this.thumbnailItems = this.thumbNail.querySelectorAll('.item');
+
+            if (direction === 'next') {
+                this.sliderList.appendChild(sliderItems[0])
+                this.thumbNail.appendChild(this.thumbnailItems[0])
+                console.log('this.slider', this.slider)
+                this.slider.classList.add('next')
+                console.log(this.thumbnailItems);
+            } else {
+                this.sliderList.prepend(sliderItems[sliderItems.length - 1])
+                this.thumbNail.prepend(this.thumbnailItems[this.thumbnailItems.length - 1])
+                this.slider.classList.add('prev')
+                console.log(this.thumbnailItems);
+
+            }
+
+            this.slider.addEventListener('animationend', () => {
+                if (direction === 'next') {
+                    this.slider.classList.remove('next')
+                } else {
+                    this.slider.classList.remove('prev')
+                }
+            }, { once: true });
 
             // let sliderItems = this.sliderList.querySelectorAll('.item');
 
@@ -93,27 +108,6 @@ export default {
 
             // }, { once: true }) // L'evento è gestito una sola volta
 
-            let sliderItems = this.sliderList.querySelectorAll('.item');
-
-            if (direction === 'next') {
-                this.sliderList.appendChild(sliderItems[0])
-                this.thumbNail.appendChild(this.thumbnailItems[0])
-                console.log('this.slider', this.slider)
-                this.slider.classList.add('next')
-            } else {
-                this.sliderList.prepend(sliderItems[sliderItems.length - 1])
-                this.thumbNail.prepend(this.thumbnailItems[this.thumbnailItems.length - 1])
-                this.slider.classList.add('prev')
-            }
-
-            this.slider.addEventListener('animationend', () => {
-                if (direction === 'next') {
-                    this.slider.classList.remove('next')
-                } else {
-                    this.slider.classList.remove('prev')
-                }
-            }, { once: true });
-
         }
     }
 
@@ -125,11 +119,12 @@ export default {
 
 <template>
     <div class="slider">
+        <a to="/">Go Back</a>
         <div class="list">
-            <div class="item">
+            <div id="blu" class="item">
                 <img src="../components/icons/blu.jpg" alt="">
                 <div class="content">
-                    <div class="title">Title</div>
+                    <div class="title">Title0</div>
                     <div class="type">Front</div>
                     <div class="description">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Incidunt, nemo
                         perspiciatis delectus cumque mollitia, odio praesentium id quidem facere recusandae doloribus
@@ -139,10 +134,10 @@ export default {
                     </div>
                 </div>
             </div>
-            <div class="item">
+            <div id="giallo" class="item">
                 <img src="../components/icons/giallo.jpg" alt="">
                 <div class="content">
-                    <div class="title">Title</div>
+                    <div class="title">Title1</div>
                     <div class="type">Front</div>
                     <div class="description">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Incidunt, nemo
                         perspiciatis delectus cumque mollitia, odio praesentium id quidem facere recusandae doloribus
@@ -152,10 +147,10 @@ export default {
                     </div>
                 </div>
             </div>
-            <div class="item">
+            <div id="rosso" class="item">
                 <img src="../components/icons/rosso.jpg" alt="">
                 <div class="content">
-                    <div class="title">Title</div>
+                    <div class="title">Title2</div>
                     <div class="type">Front</div>
                     <div class="description">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Incidunt, nemo
                         perspiciatis delectus cumque mollitia, odio praesentium id quidem facere recusandae doloribus
@@ -165,10 +160,10 @@ export default {
                     </div>
                 </div>
             </div>
-            <div class="item">
+            <div id="verde" class="item">
                 <img src="../components/icons/verde.jpg" alt="">
                 <div class="content">
-                    <div class="title">Title</div>
+                    <div class="title">Title3</div>
                     <div class="type">Front</div>
                     <div class="description">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Incidunt, nemo
                         perspiciatis delectus cumque mollitia, odio praesentium id quidem facere recusandae doloribus
@@ -193,16 +188,16 @@ export default {
             </div> -->
         </div>
         <div class="thumbnail">
-            <div class="item">
+            <div id="blu2" class="item">
                 <img src="../components/icons/blu.jpg" alt="">
             </div>
-            <div class="item">
+            <div id="giallo2" class="item">
                 <img src="../components/icons/giallo.jpg" alt="">
             </div>
-            <div class="item">
+            <div id="rosso2" class="item">
                 <img src="../components/icons/rosso.jpg" alt="">
             </div>
-            <div class="item">
+            <div id="verde2" class="item">
                 <img src="../components/icons/verde.jpg" alt="">
             </div>
             <!-- <div class="item">
@@ -218,6 +213,11 @@ export default {
 </template>
 
 <style scoped>
+.slider a {
+    background-color: orangered;
+    z-index: 1000;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -357,13 +357,16 @@ a {
 
 .slider .list .item:nth-child(1) {
     z-index: 1;
+    /* Metti la prima slide sopra le altre */
 }
 
+/* Animazione di ingresso per il contenuto della slide corrente */
 .slider .list .item:nth-child(1) .content .title,
 .slider .list .item:nth-child(1) .content .type,
 .slider .list .item:nth-child(1) .content .description,
 .slider .list .item:nth-child(1) .content .button {
     transform: translateY(50px);
+    /* Sposta il contenuto inizialmente verso il basso */
     filter: blur(20px);
     opacity: 0;
     animation: showContent 0.5s 1s linear 1 forwards;
@@ -372,28 +375,29 @@ a {
 @keyframes showContent {
     to {
         transform: translateY(0px);
+        /* Riporta il contenuto nella posizione iniziale */
         filter: blur(0px);
         opacity: 1;
     }
 }
 
 .slider .list .item:nth-child(1) .content .title {
-    animation-delay: 0.4s;
+    animation-delay: 0.2s;
 }
 
 .slider .list .item:nth-child(1) .content .type {
-    animation-delay: 0.6s;
+    animation-delay: 0.3s;
 }
 
 .slider .list .item:nth-child(1) .content .description {
-    animation-delay: 0.8s;
+    animation-delay: 0.4s;
 }
 
 .slider .list .item:nth-child(1) .content .button {
-    animation-delay: 1s;
+    animation-delay: 0.5s;
 }
 
-/* animation for button next */
+/* animation for button next  riduce temporaneamente l'immagine principale*/
 .slider.next .list .item:nth-child(1) img {
     width: 150px;
     height: 220px;
@@ -414,6 +418,7 @@ a {
     }
 }
 
+/* Animazione per la miniatura nell'ultima posizione quando viene cliccato 'next' */
 .slider.next .thumbnail .item:nth-last-child(1) {
     overflow: hidden;
     animation: showThumbnail 0.5s linear 1 forwards;
@@ -430,9 +435,86 @@ a {
     }
 }
 
+
+/* Animazione per il movimento del carosello delle miniature */
 .slider.next .thumbnail {
     animation: effectNext .5s linear 1 forwards;
 }
+
+
+/* Definisce lo spostamento laterale delle miniature */
+@keyframes effectNext {
+    from {
+        transform: translatex(150px)
+    }
+}
+
+/* animation for prev button */
+
+/* Animazione per il bottone 'prev', riduce temporaneamente la seconda slide */
+.slider.prev .list .item:nth-child(2) {
+    z-index: 2;
+}
+
+/* Riduce temporaneamente l'immagine della seconda slide */
+.slider.prev .list .item:nth-child(2) img {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    animation: outFrame 0.5s linear 1 forwards;
+}
+
+
+/* Anima la riduzione delle immagini verso la dimensione delle miniature */
+@keyframes outFrame {
+    to {
+        width: 150px;
+        height: 220px;
+        bottom: 50px;
+        left: 45%;
+        border-radius: 20px
+    }
+
+}
+
+/* Nasconde la miniatura all'inizio per poi farla apparire */
+.slider.prev .thumbnail .item:nth-child(1) {
+    overflow: hidden;
+    opacity: 0;
+    animation: showThumbnail .5s linear 1 forwards;
+}
+
+
+/* Anima il contenuto della slide in uscita quando si clicca 'prev' */
+.slider.prev .list .item:nth-child(1) .content .title,
+.slider.prev .list .item:nth-child(1) .content .type,
+.slider.prev .list .item:nth-child(1) .content .description,
+.slider.prev .list .item:nth-child(1) .content .button {
+
+    animation: contentOut 0.5s 1s linear 1 forwards;
+}
+
+
+/* Definisce l'animazione per nascondere il contenuto */
+@keyframes contentOut {
+    to {
+        transform: translateY(-150px);
+        filter: blur(20px);
+        opacity: 0
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .thumbnail .item {
+        width: 100px;
+        height: 170px;
+        flex-shrink: 0;
+        position: relative;
+        /* transition: transform 0.5s ease; */
+    }
+}
+
+
 
 /* .slider.next .thumbnail .item {
     animation: slideNext 0.5s forwards
@@ -461,64 +543,4 @@ a {
         transform: translateX(100%);
     }
 } */
-
-@keyframes effectNext {
-    from {
-        transform: translatex(150px)
-    }
-}
-
-.slider.prev .list .item:nth-child(2) {
-    z-index: 2;
-}
-
-.slider.prev .list .item:nth-child(2) img {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    animation: outFrame 0.5s linear 1 forwards;
-}
-
-@keyframes outFrame {
-    to {
-        width: 150px;
-        height: 220px;
-        bottom: 50px;
-        left: 50%;
-        border-radius: 20px
-    }
-
-}
-
-.slider.prev .thumbnail .item:nth-child(1) {
-    overflow: hidden;
-    opacity: 0;
-    animation: showThumbnail .5s linear 1 forwards;
-}
-
-.slider.prev .list .item:nth-child(1) .content .title,
-.slider.prev .list .item:nth-child(1) .content .type,
-.slider.prev .list .item:nth-child(1) .content .description,
-.slider.prev .list .item:nth-child(1) .content .button {
-
-    animation: contentOut 0.5s 1s linear 1 forwards;
-}
-
-@keyframes contentOut {
-    to {
-        transform: translateY(-150px);
-        filter: blur(20px);
-        opacity: 0
-    }
-}
-
-@media screen and (max-width: 768px) {
-    .thumbnail .item {
-        width: 100px;
-        height: 170px;
-        flex-shrink: 0;
-        position: relative;
-        /* transition: transform 0.5s ease; */
-    }
-}
 </style>

@@ -84,7 +84,19 @@ export default {
 
 </template>
 
-<style scoped>
+<style>
+::-webkit-scrollbar {
+    background: transparent;
+    /* border-left: 1px solid rgb(255, 78, 71); */
+    width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgb(2, 2, 69);
+    border-radius: 5px;
+
+}
+
 @keyframes appear {
     from {
         opacity: 0;
