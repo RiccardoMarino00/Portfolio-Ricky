@@ -1,7 +1,7 @@
 <template>
     <footer>
         <div class="button-div">
-            <router-link to="/slider-works" class="see-more-button">See more</router-link>
+            <router-link to="/slider-works" class="see-more-button pulse">See more</router-link>
         </div>
         <div class="container">
             <img src="./icons/logo-white.png" alt="">
@@ -92,14 +92,36 @@ ul li:hover .social-icon {
     position: relative;
     top: 100px;
     z-index: 1000;
-    background-color: #FF4E47;
+    background-color: rgb(255, 78, 71);
+
 
 }
 
+.pulse {
+    animation: pulse-animation 2s infinite;
+}
+
+.pulse:hover {
+    animation: none;
+}
+
+@keyframes pulse-animation {
+    0% {
+        box-shadow: 0 0 0 0px rgba(255, 78, 71, 0.9);
+    }
+
+    100% {
+        box-shadow: 0 0 0 30px rgba(255, 78, 71, 0);
+    }
+}
+
+
+
 .see-more-button:hover {
-    background-color: #fdcdcd;
-    color: #FF4E47;
-    padding: 18px;
+    /* background-color: #fdcdcd; */
+    /* color: #FF4E47; */
+    padding: 22px;
+    font-size: 21px;
     border: none;
 }
 
