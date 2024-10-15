@@ -85,16 +85,22 @@ export default {
 </template>
 
 <style>
+::-webkit-scrollbar-track {
+    border: 5px solid white;
+    /* border-color: transparent; */
+    /* background-color: #b2bec3; */
+    background-color: #FF4E47;
+}
+
 ::-webkit-scrollbar {
-    background: transparent;
-    /* border-left: 1px solid rgb(255, 78, 71); */
-    width: 8px;
+    width: 13px;
+    background-color: #dfe6e9;
 }
 
 ::-webkit-scrollbar-thumb {
-    background: rgb(2, 2, 69);
-    border-radius: 5px;
-
+    background-color: #FF4E47;
+    border-radius: 10px;
+    border: 4px solid #FFEE50;
 }
 
 @keyframes appear {

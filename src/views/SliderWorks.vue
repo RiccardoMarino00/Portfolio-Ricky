@@ -119,57 +119,60 @@ export default {
 
 <template>
     <div class="slider">
-        <a to="/">Go Back</a>
+        <button>
+            <router-link class="goback" to="/">Go Back</router-link>
+        </button>
         <div class="list">
             <div id="blu" class="item">
-                <img src="../components/icons/blu.jpg" alt="">
+                <img src="../components/icons/1295196.png" alt="">
                 <div class="content">
-                    <div class="title">Title0</div>
-                    <div class="type">Front</div>
-                    <div class="description">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Incidunt, nemo
-                        perspiciatis delectus cumque mollitia, odio praesentium id quidem facere recusandae doloribus
-                        vel repudiandae fugiat? Rem.</div>
+                    <div class="title">Dicord</div>
+                    <div class="type">Layout Replica</div>
+                    <div class="description">I created a static replica of the Discord layout using HTML, CSS and
+                        Flexbox to manage the positioning of elements.</div>
                     <div class="button">
-                        <button>SEE MORE</button>
+                        <a class="github-link" href="https://github.com/RiccardoMarino00/htmlcss-discord">GitHub</a>
                     </div>
                 </div>
             </div>
             <div id="giallo" class="item">
-                <img src="../components/icons/giallo.jpg" alt="">
+                <img src="../components/icons/plane.jpg" alt="">
                 <div class="content">
-                    <div class="title">Title1</div>
-                    <div class="type">Front</div>
-                    <div class="description">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Incidunt, nemo
-                        perspiciatis delectus cumque mollitia, odio praesentium id quidem facere recusandae doloribus
-                        vel repudiandae fugiat? Rem.</div>
+                    <div class="title">BookaVacay</div>
+                    <div class="type">House Rental Site</div>
+                    <div class="description">BookaVacay is a group project simulating a holiday home rental site. The
+                        front-end was developed using Vue, while Laravel with PHP and Blade was used for the back-end.
+                        The site is supported by a MySQL database and includes flat management functionality via CRUD,
+                        as well as login and logout systems to ensure a complete and secure user experience.</div>
                     <div class="button">
-                        <button>SEE MORE</button>
+                        <a class="github-link">GitHub</a>
                     </div>
                 </div>
             </div>
             <div id="rosso" class="item">
-                <img src="../components/icons/rosso.jpg" alt="">
+                <img src="../components/icons/bocaVacaySlide.jpg" alt="">
                 <div class="content">
-                    <div class="title">Title2</div>
-                    <div class="type">Front</div>
-                    <div class="description">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Incidunt, nemo
-                        perspiciatis delectus cumque mollitia, odio praesentium id quidem facere recusandae doloribus
-                        vel repudiandae fugiat? Rem.</div>
+                    <div class="title">PlanaVacay</div>
+                    <div class="type">Planning trip app</div>
+                    <div class="description">PlanaVacay is an app designed to efficiently manage and organise holidays.
+                        As a team project, we used MongoDB for the database, Vue for the front end and JavaScript to
+                        implement CRUD operations, giving users an intuitive and comprehensive experience in planning
+                        their holidays.</div>
                     <div class="button">
-                        <button>SEE MORE</button>
+                        <a class="github-link">GitHub</a>
                     </div>
                 </div>
             </div>
             <div id="verde" class="item">
-                <img src="../components/icons/verde.jpg" alt="">
+                <img src="../components/icons/d&dWallpaper.jpg" alt="">
                 <div class="content">
-                    <div class="title">Title3</div>
-                    <div class="type">Front</div>
+                    <div class="title">D & D</div>
+                    <div class="type">Weapons and Characters for D&D</div>
                     <div class="description">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Incidunt, nemo
                         perspiciatis delectus cumque mollitia, odio praesentium id quidem facere recusandae doloribus
                         vel repudiandae fugiat? Rem.</div>
                     <div class="button">
-                        <button>SEE MORE</button>
+                        <a href="https://github.com/RiccardoMarino00/D-and-D-backend" class="github-link">GitHub</a>
                     </div>
                 </div>
             </div>
@@ -182,23 +185,23 @@ export default {
                         perspiciatis delectus cumque mollitia, odio praesentium id quidem facere recusandae doloribus
                         vel repudiandae fugiat? Rem.</div>
                     <div class="button">
-                        <button>SEE MORE</button>
+                        <a class="github-link">GitHub</a>
                     </div>
                 </div>
             </div> -->
         </div>
         <div class="thumbnail">
             <div id="blu2" class="item">
-                <img src="../components/icons/blu.jpg" alt="">
+                <img src="../components/icons/1295196.png" alt="">
             </div>
             <div id="giallo2" class="item">
-                <img src="../components/icons/giallo.jpg" alt="">
+                <img src="../components/icons/plane.jpg" alt="">
             </div>
             <div id="rosso2" class="item">
-                <img src="../components/icons/rosso.jpg" alt="">
+                <img src="../components/icons/bocaVacaySlide.jpg" alt="">
             </div>
             <div id="verde2" class="item">
-                <img src="../components/icons/verde.jpg" alt="">
+                <img src="../components/icons/d&dWallpaper.jpg" alt="">
             </div>
             <!-- <div class="item">
                 <img src="../components/icons/viola.jpg" alt="">
@@ -213,9 +216,25 @@ export default {
 </template>
 
 <style scoped>
-.slider a {
-    background-color: orangered;
+.slider .goback {
+    border: 2px solid #fff;
+    padding: 10px;
+    border-radius: 6px;
+    color: #fff;
+    transition: background-color 480ms ease;
     z-index: 1000;
+    position: relative;
+    top: 15px;
+    left: 5px;
+    cursor: pointer;
+
+}
+
+.slider .goback:hover {
+    background-color: #FF4E47;
+    color: white;
+    border: 2px solid #FF4E47;
+
 }
 
 * {
@@ -261,8 +280,7 @@ a {
     transform: translateX(-50%);
 }
 
-.slider .list .item .content .title,
-.slider .list .item .content .type {
+.slider .list .item .content .title {
     font-size: 5em;
     font-weight: bold;
     line-height: 1.3em;
@@ -270,27 +288,32 @@ a {
 
 .slider .list .item .content .type {
     color: rgb(255, 78, 71);
+    font-size: 3em;
+    font-weight: bold;
+    line-height: 1.4em;
 }
 
 .slider .list .item .content .description {
-    font-size: 14px;
+    font-size: 18px;
 }
 
 .slider .list .item .content .button {
     margin-top: 20px;
 }
 
-.slider .list .item .content .button button {
-    border: none;
-    background-color: #eee;
+.slider .list .item .content .button .github-link {
+    border: 1px solid white;
+    background-color: transparent;
     cursor: pointer;
     letter-spacing: 2px;
     padding: 7px 15px;
     font-weight: 500;
     transition: 0.4s;
+    border-radius: 6px;
+    /* color: rgb(255, 78, 71); */
 }
 
-.slider .list .item .content .button button:hover {
+.slider .list .item .content .button .github-link:hover {
     background-color: rgb(255, 78, 71);
     color: #eee;
 }
