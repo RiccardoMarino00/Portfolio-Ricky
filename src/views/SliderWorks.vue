@@ -535,6 +535,27 @@ a {
         position: relative;
         /* transition: transform 0.5s ease; */
     }
+
+    .slider .list .item .content {
+        padding-right: 0;
+        top: 12%;
+    }
+
+    .slider .list .item .content .title {
+        font-size: 30px;
+    }
+
+    .slider .list .item .content .type {
+        font-size: 30px;
+    }
+
+    .slider .list .item .content .description {
+        font-size: 16px;
+    }
+
+    .arrows {
+        right: 60%;
+    }
 }
 
 
