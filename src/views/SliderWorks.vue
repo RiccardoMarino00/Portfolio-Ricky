@@ -23,6 +23,7 @@ export default {
             //sposta la prima miniatura in fondo
 
             this.thumbNail.appendChild(this.thumbnailItems[0]);
+
         })
 
     },
@@ -192,15 +193,19 @@ export default {
         </div>
         <div class="thumbnail">
             <div id="blu2" class="item">
+                <p>Discord</p>
                 <img src="../components/icons/1295196.png" alt="">
             </div>
             <div id="giallo2" class="item">
+                <p>BookaVacay</p>
                 <img src="../components/icons/plane.jpg" alt="">
             </div>
             <div id="rosso2" class="item">
+                <p>PlanaVacay</p>
                 <img src="../components/icons/bocaVacaySlide.jpg" alt="">
             </div>
             <div id="verde2" class="item">
+                <p>D & D</p>
                 <img src="../components/icons/d&dWallpaper.jpg" alt="">
             </div>
             <!-- <div class="item">
@@ -208,14 +213,26 @@ export default {
             </div> -->
         </div>
         <div class="arrows">
-            <button @click="moveSlider('prev')" class="prev"> prev </button>
-            <button @click="moveSlider('next')" class="next"> next </button>
+            <button @click="moveSlider('prev')" class="prev pulse"> prev </button>
+            <button @click="moveSlider('next')" class="next pulse"> next </button>
         </div>
     </div>
 
 </template>
 
 <style scoped>
+.thumbnail .item p {
+    background-color: rgba(255, 78, 71, 0.5);
+    width: max-content;
+    padding: 5px 8px;
+    border-radius: 8px;
+    color: white;
+    position: relative;
+    top: 7%;
+    right: 5%;
+    box-shadow: 5px 0 15px rgba(0, 0, 0, 0.3);
+}
+
 .slider .goback {
     border: 2px solid #fff;
     padding: 10px;
@@ -354,7 +371,7 @@ a {
     width: 300px;
     max-width: 30%;
     display: flex;
-    gap: 10px;
+    gap: 40px;
     align-items: center;
 }
 
@@ -527,6 +544,29 @@ a {
     }
 }
 
+
+.pulse {
+    animation: pulse-animation 2s infinite;
+}
+
+.pulse:hover {
+    animation: none;
+}
+
+@keyframes pulse-animation {
+    0% {
+        box-shadow: 0 0 0 0px rgba(255, 78, 71, 0.9);
+    }
+
+    100% {
+        box-shadow: 0 0 0 30px rgba(255, 78, 71, 0);
+    }
+}
+
+.current {
+    filter: grayscale(100%);
+}
+
 @media screen and (max-width: 768px) {
     .thumbnail .item {
         width: 100px;
@@ -555,6 +595,11 @@ a {
 
     .arrows {
         right: 60%;
+    }
+
+    .thumbnail .item p {
+        padding: 3px 6px;
+        font-size: 14px;
     }
 }
 
