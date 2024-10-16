@@ -108,14 +108,14 @@ article {
 
 
 
-article:hover .img-article {
+/* article:hover .img-article {
     opacity: 0;
     transform: scale(1.1);
 }
 
 article:hover .img-hover {
     opacity: 1;
-}
+} */
 
 
 
