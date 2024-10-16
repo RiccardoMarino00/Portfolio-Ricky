@@ -146,7 +146,7 @@ export default {
                         The site is supported by a MySQL database and includes flat management functionality via CRUD,
                         as well as login and logout systems to ensure a complete and secure user experience.</div>
                     <div class="button">
-                        <a class="github-link">GitHub</a>
+                        <a href="https://github.com/RiccardoMarino00/BookaVacay-backend" class="github-link">GitHub</a>
                     </div>
                 </div>
             </div>
@@ -160,7 +160,7 @@ export default {
                         implement CRUD operations, giving users an intuitive and comprehensive experience in planning
                         their holidays.</div>
                     <div class="button">
-                        <a class="github-link">GitHub</a>
+                        <a href="https://github.com/RiccardoMarino00/travel-app" class="github-link">GitHub</a>
                     </div>
                 </div>
             </div>
