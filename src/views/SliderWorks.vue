@@ -169,9 +169,13 @@ export default {
                 <div class="content">
                     <div class="title">D & D</div>
                     <div class="type">Weapons and Characters for D&D</div>
-                    <div class="description">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Incidunt, nemo
-                        perspiciatis delectus cumque mollitia, odio praesentium id quidem facere recusandae doloribus
-                        vel repudiandae fugiat? Rem.</div>
+                    <div class="description">In this group project, we developed a web application for managing a
+                        weapons inventory, using Laravel for the backend and Vue for the frontend. The backend is
+                        structured according to Laravel best practices, via configuration files, migrations for the
+                        MySQL database, and a modular architecture. The application allows CRUD (create, read, update
+                        and delete) operations on objects in the database, with each weapon associated with various
+                        customisable attributes, and routes manage the interactions between the frontend and backend
+                    </div>
                     <div class="button">
                         <a href="https://github.com/RiccardoMarino00/D-and-D-backend" class="github-link">GitHub</a>
                     </div>
@@ -222,11 +226,11 @@ export default {
 
 <style scoped>
 .thumbnail .item p {
-    background-color: rgba(255, 78, 71, 0.5);
+    background-color: rgb(255 255 255 / 50%);
     width: max-content;
     padding: 5px 8px;
     border-radius: 8px;
-    color: white;
+    color: #5a1c1c;
     position: relative;
     top: 7%;
     right: 5%;
@@ -286,7 +290,7 @@ a {
 
 .slider .list .item .content {
     position: absolute;
-    top: 20%;
+    top: 13%;
     width: 1140px;
     max-width: 80%;
     left: 50%;
