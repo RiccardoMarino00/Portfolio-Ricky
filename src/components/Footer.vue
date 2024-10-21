@@ -5,7 +5,8 @@
         </div>
         <div class="container">
             <img src="./icons/logo-white.png" alt="">
-            <p>The fastest way to learn to code is to start building, <br> and let the challenges teach you.</p>
+            <p>The fastest way to learn coding is by building projects and letting the challenges teach you along the
+                way</p>
             <ul>
                 <li>
                     <a href="https://www.linkedin.com/in/riccardo-marino-149115315/"><font-awesome-icon
