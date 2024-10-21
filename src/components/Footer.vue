@@ -4,8 +4,9 @@
             <router-link to="/slider-works" class="see-more-button pulse">See more</router-link>
         </div>
         <div class="container">
-            <img src="./icons/logo-white.png" alt="">
-            <p>The fastest way to learn coding is by building projects and letting the challenges teach you along the
+            <img src="./icons/creamwhitelogo.png" alt="">
+            <p>The fastest way to learn coding is by building projects <br> and letting the challenges teach you along
+                the
                 way</p>
             <ul>
                 <li>
@@ -43,8 +44,8 @@
 }
 
 .container img {
-    width: 57px;
-    height: 55px;
+    width: 160px;
+    height: 120px;
     position: relative;
 }
 

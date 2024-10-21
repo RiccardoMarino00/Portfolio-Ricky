@@ -3,7 +3,7 @@
         <div class="container">
             <div class="row">
                 <div class="nav-logo">
-                    <img class="logo" src="../components/icons/logo-no-background.png" alt="">
+                    <img class="logo" src="../components/icons/logosuper.png" alt="" sizes="64x64">
                 </div>
                 <div></div>
                 <div></div>
@@ -46,8 +46,8 @@ nav {
 }
 
 .logo {
-    width: 90px;
-    height: 55px
+    width: 117px;
+    height: 89px;
 }
 
 .logo:hover {
