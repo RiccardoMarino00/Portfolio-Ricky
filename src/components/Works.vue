@@ -70,11 +70,6 @@
                 <div class="item" style="--position: 10">
                     <p>Discord</p>
                 </div>
-                <!-- <div class="item" style="--position: 11"><img src="./icons/discordfont.png" alt=""></div> -->
-                <!-- <div class="item" style="--position: 12"><img src="./icons/avadafont.png" alt=""></div> -->
-                <!-- <div class="item" style="--position: 13"><img src="./icons/bookafont.png" alt=""></div> -->
-                <!-- <div class="item" style="--position: 14"><img src="./icons/d&dfont.png" alt=""></div> -->
-                <!-- <div class="item" style="--position: 15"><img src="./icons/marvelfont.png" alt=""></div> -->
             </div>
         </div>
         <div class="slider" reverse="true" style="
