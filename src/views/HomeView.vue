@@ -74,10 +74,10 @@ export default {
             </div>
         </div>
         <div v-else class="content view">
-            <Navbar class="block" />
-            <Hero class="block" />
-            <Skills class="block" />
-            <Works class="block" />
+            <Navbar />
+            <Hero />
+            <Skills />
+            <Works />
             <Footer />
         </div>
     </div>
