@@ -100,6 +100,7 @@
 <style scoped>
 .slider {
     width: 100%;
+    margin: 0 auto;
     height: var(--height);
     overflow: hidden;
     mask-image: linear-gradient(to right,
