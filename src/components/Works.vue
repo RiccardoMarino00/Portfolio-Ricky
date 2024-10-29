@@ -79,16 +79,16 @@
         </div>
         <div class="slider" reverse="true" style="
         --width: 250px;
-        --height: 200px;
+        --height: 220px;
         --quantity: 5;
         ">
             <div class="list">
-                <div class="item" style="--position: 1"><img src="./icons/provaslider.jpg" alt=""></div>
-                <div class="item" style="--position: 2"><img src="./icons/provaslider.jpg" alt=""></div>
-                <div class="item" style="--position: 3"><img src="./icons/provaslider.jpg" alt="">
+                <div class="item" style="--position: 1"><img src="./icons/progress.jpg" alt=""></div>
+                <div class="item" style="--position: 2"><img src="./icons/progress.jpg" alt=""></div>
+                <div class="item" style="--position: 3"><img src="./icons/progress.jpg" alt="">
                 </div>
-                <div class="item" style="--position: 4"><img src="./icons/provaslider.jpg" alt=""></div>
-                <div class="item" style="--position: 5"><img src="./icons/provaslider.jpg" alt=""></div>
+                <div class="item" style="--position: 4"><img src="./icons/progress.jpg" alt=""></div>
+                <div class="item" style="--position: 5"><img src="./icons/progress.jpg" alt=""></div>
                 <!-- <div class="item" style="--position: 6"><img src="./icons/DiscordRicca.png" alt=""></div>
                 <div class="item" style="--position: 7"><img src="./icons/Avada.png" alt=""></div>
                 <div class="item" style="--position: 8"><img src="./icons/Ricky Sfondi_Tavola disegno 1-02.png" alt="">
@@ -102,7 +102,7 @@
 </template>
 
 
-<style>
+<style scoped>
 .slider {
     width: 100%;
     height: var(--height);
@@ -143,11 +143,15 @@
 
 .slider .list .item p {
     width: 100%;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family: "Kings", cursive;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 24px;
 }
 
 .slider .list .item img {
     width: 100%;
+    margin-top: 96px;
 }
 
 .slider[reverse="true"] .item {
@@ -249,7 +253,7 @@ article:hover .img-hover {
 
 
 .space-div {
-    height: 100px;
+    height: 20px;
 }
 
 article button {
