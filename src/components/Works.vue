@@ -78,12 +78,12 @@
         --quantity: 5;
         ">
             <div class="list">
-                <div class="item" style="--position: 1"><img src="/icons/progress.jpg" alt=""></div>
-                <div class="item" style="--position: 2"><img src="/icons/progress.jpg" alt=""></div>
-                <div class="item" style="--position: 3"><img src="/icons/progress.jpg" alt="">
+                <div class="item" style="--position: 1"><img src="/src/components/icons/progress.jpg" alt=""></div>
+                <div class="item" style="--position: 2"><img src="/src/components/icons/progress.jpg" alt=""></div>
+                <div class="item" style="--position: 3"><img src="/src/components/icons/progress.jpg" alt="">
                 </div>
-                <div class="item" style="--position: 4"><img src="/icons/progress.jpg" alt=""></div>
-                <div class="item" style="--position: 5"><img src="/icons/progress.jpg" alt=""></div>
+                <div class="item" style="--position: 4"><img src="/src/components/icons/progress.jpg" alt=""></div>
+                <div class="item" style="--position: 5"><img src="/src/components/icons/progress.jpg" alt=""></div>
                 <!-- <div class="item" style="--position: 6"><img src="./icons/DiscordRicca.png" alt=""></div>
                 <div class="item" style="--position: 7"><img src="./icons/Avada.png" alt=""></div>
                 <div class="item" style="--position: 8"><img src="./icons/Ricky Sfondi_Tavola disegno 1-02.png" alt="">
