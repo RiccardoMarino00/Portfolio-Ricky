@@ -72,25 +72,12 @@
                 </div>
             </div>
         </div>
+
         <div class="slider" reverse="true" style="
-        --width: 250px;
-        --height: 220px;
-        --quantity: 5;
+        --width: 100px;
+        --height: 50px;
+        --quantity: 10;
         ">
-            <!-- <div class="list">
-                <div class="item" style="--position: 1"><img src="/dist/assets/dungeon-work-BRbrBqWZ.png" alt=""></div>
-                <div class=" item" style="--position: 2"><img src="/dist/assets/dungeon-work-BRbrBqWZ.png" alt=""></div>
-                <div class="item" style="--position: 3"><img src="/dist/assets/dungeon-work-BRbrBqWZ.png" alt="">
-                </div>
-                <div class="item" style="--position: 4"><img src="/dist/assets/dungeon-work-BRbrBqWZ.png" alt=""></div>
-                <div class="item" style="--position: 5"><img src="/dist/assets/dungeon-work-BRbrBqWZ.png" alt=""></div>
-                <div class="item" style="--position: 6"><img src="./icons/DiscordRicca.png" alt=""></div>
-                <div class="item" style="--position: 7"><img src="./icons/Avada.png" alt=""></div>
-                <div class="item" style="--position: 8"><img src="./icons/Ricky Sfondi_Tavola disegno 1-02.png" alt="">
-                </div>
-                <div class="item" style="--position: 9"><img src="./icons/dungeon-work.png" alt=""></div>
-                <div class="item" style="--position: 10"><img src="./icons/marvel-work.png" alt=""></div>
-            </div> -->
             <div class="list">
                 <div class="item" style="--position: 1">
                     <p>BookaVacay</p>
@@ -124,6 +111,27 @@
                 </div>
             </div>
         </div>
+        <!-- <div class="slider" reverse="true" style="
+        --width: 250px;
+        --height: 220px;
+        --quantity: 5;
+        ">
+            <div class="list">
+                <div class="item" style="--position: 1"><img src="/dist/assets/dungeon-work-BRbrBqWZ.png" alt=""></div>
+                <div class=" item" style="--position: 2"><img src="/dist/assets/dungeon-work-BRbrBqWZ.png" alt=""></div>
+                <div class="item" style="--position: 3"><img src="/dist/assets/dungeon-work-BRbrBqWZ.png" alt="">
+                </div>
+                <div class="item" style="--position: 4"><img src="/dist/assets/dungeon-work-BRbrBqWZ.png" alt=""></div>
+                <div class="item" style="--position: 5"><img src="/dist/assets/dungeon-work-BRbrBqWZ.png" alt=""></div>
+                <div class="item" style="--position: 6"><img src="./icons/DiscordRicca.png" alt=""></div>
+                <div class="item" style="--position: 7"><img src="./icons/Avada.png" alt=""></div>
+                <div class="item" style="--position: 8"><img src="./icons/Ricky Sfondi_Tavola disegno 1-02.png" alt="">
+                </div>
+                <div class="item" style="--position: 9"><img src="./icons/dungeon-work.png" alt=""></div>
+                <div class="item" style="--position: 10"><img src="./icons/marvel-work.png" alt=""></div>
+            </div>
+            
+        </div> -->
         <div class="space-div"></div>
     </div>
 </template>
