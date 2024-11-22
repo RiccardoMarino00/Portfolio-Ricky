@@ -77,7 +77,7 @@
         --height: 220px;
         --quantity: 5;
         ">
-            <div class="list">
+            <!-- <div class="list">
                 <div class="item" style="--position: 1"><img src="/dist/assets/dungeon-work-BRbrBqWZ.png" alt=""></div>
                 <div class=" item" style="--position: 2"><img src="/dist/assets/dungeon-work-BRbrBqWZ.png" alt=""></div>
                 <div class="item" style="--position: 3"><img src="/dist/assets/dungeon-work-BRbrBqWZ.png" alt="">
@@ -90,8 +90,8 @@
                 </div>
                 <div class="item" style="--position: 9"><img src="./icons/dungeon-work.png" alt=""></div>
                 <div class="item" style="--position: 10"><img src="./icons/marvel-work.png" alt=""></div>
-            </div>
-            <!-- <div class="list">
+            </div> -->
+            <div class="list">
                 <div class="item" style="--position: 1">
                     <p>BookaVacay</p>
                 </div>
@@ -122,7 +122,7 @@
                 <div class="item" style="--position: 10">
                     <p>Discord</p>
                 </div>
-            </div> -->
+            </div>
         </div>
         <div class="space-div"></div>
     </div>
