@@ -111,7 +111,7 @@
                 </div>
             </div>
         </div> -->
-        <div class="slider" reverse="true" style="
+        <div class="slider" data-reverse="true" style="
         --width: 250px;
         --height: 220px;
         --quantity: 5;
