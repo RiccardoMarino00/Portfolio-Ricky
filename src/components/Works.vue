@@ -117,18 +117,18 @@
         --quantity: 5;
         ">
             <div class="list">
-                <div class="item" style="--position: 1"><img src="./icons/DiscordRicca.png" alt=""></div>
-                <div class=" item" style="--position: 2"><img src="./icons/DiscordRicca.png" alt=""></div>
-                <div class="item" style="--position: 3"><img src="./icons/DiscordRicca.png" alt="">
+                <div class="item" style="--position: 1"><img src="./icons/progress.jpg" alt=""></div>
+                <div class=" item" style="--position: 2"><img src="./icons/progress.jpg" alt=""></div>
+                <div class="item" style="--position: 3"><img src="./icons/progress.jpg" alt="">
                 </div>
-                <div class="item" style="--position: 4"><img src="./icons/DiscordRicca.png" alt=""></div>
-                <div class="item" style="--position: 5"><img src="./icons/DiscordRicca.png" alt=""></div>
-                <div class="item" style="--position: 6"><img src="./icons/DiscordRicca.png" alt=""></div>
-                <div class="item" style="--position: 7"><img src="./icons/Avada.png" alt=""></div>
-                <div class="item" style="--position: 8"><img src="./icons/Ricky Sfondi_Tavola disegno 1-02.png" alt="">
+                <div class="item" style="--position: 4"><img src="./icons/progress.jpg" alt=""></div>
+                <div class="item" style="--position: 5"><img src="./icons/progress.jpg" alt=""></div>
+                <div class="item" style="--position: 6"><img src="./icons/progress.jpg" alt=""></div>
+                <div class="item" style="--position: 7"><img src="./icons/progress.jpg" alt=""></div>
+                <div class="item" style="--position: 8"><img src="./icons/progress.jpg" alt="">
                 </div>
-                <div class="item" style="--position: 9"><img src="./icons/dungeon-work.png" alt=""></div>
-                <div class="item" style="--position: 10"><img src="./icons/marvel-work.png" alt=""></div>
+                <div class="item" style="--position: 9"><img src="./icons/progress.jpg" alt=""></div>
+                <div class="item" style="--position: 10"><img src="./icons/progress.jpg" alt=""></div>
             </div>
 
         </div>
@@ -146,13 +146,17 @@
     mask-image: linear-gradient(to right,
             transparent,
             #000 15% 85%,
-            transparent)
+            transparent);
+    /* Applica una maschera sfumata che rende trasparenti i bordi sinistro
+             e destro dello slider. Questo crea un effetto visivo di transizione graduale degli elementi. */
+    color: #706969;
 }
 
 .slider .list {
     display: flex;
     width: 100%;
     min-width: calc(var(--width) * var(--quantity));
+    /* La larghezza minima è basata sul numero di elementi e sulla loro larghezza. */
     position: relative;
     align-items: center;
 }
@@ -164,6 +168,7 @@
     left: 100%;
     animation: autoRun 10s linear infinite;
     animation-delay: calc((10s / var(--quantity)) * (var(--position) - 1)) !important;
+    /* Ritarda l'animazione in base alla posizione dell'elemento nella lista. */
     transition: filter 0.5s;
 }
 
