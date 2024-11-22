@@ -73,7 +73,7 @@
             </div>
         </div>
 
-        <div class="slider" reverse="true" style="
+        <div class="slider" data-reverse="true" style="
         --width: 100px;
         --height: 50px;
         --quantity: 10;
@@ -190,7 +190,7 @@
     margin-top: 96px;
 }
 
-.slider[reverse="true"] .item {
+.slider[data-reverse="true"] .item {
     animation: reversePlay 10s linear infinite;
 }
 
