@@ -170,6 +170,7 @@
     animation-delay: calc((10s / var(--quantity)) * (var(--position) - 1)) !important;
     /* Ritarda l'animazione in base alla posizione dell'elemento nella lista. */
     transition: filter 0.5s;
+    transition: color 0.5s;
 }
 
 @keyframes autoRun {
@@ -220,10 +221,13 @@
 .slider:hover .item {
     animation-play-state: paused !important;
     filter: grayscale(1);
+    color: #706969;
 }
 
 .slider .item:hover {
     filter: grayscale(0);
+    color: #000;
+    cursor: progress;
 }
 
 .img-hover {
