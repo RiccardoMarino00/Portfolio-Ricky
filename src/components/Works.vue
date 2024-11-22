@@ -72,7 +72,7 @@
                 </div>
             </div>
         </div>
-
+        <!-- 
         <div class="slider" data-reverse="true" style="
         --width: 100px;
         --height: 50px;
@@ -110,8 +110,8 @@
                     <p>Discord</p>
                 </div>
             </div>
-        </div>
-        <!-- <div class="slider" reverse="true" style="
+        </div> -->
+        <div class="slider" reverse="true" style="
         --width: 250px;
         --height: 220px;
         --quantity: 5;
@@ -130,8 +130,8 @@
                 <div class="item" style="--position: 9"><img src="./icons/dungeon-work.png" alt=""></div>
                 <div class="item" style="--position: 10"><img src="./icons/marvel-work.png" alt=""></div>
             </div>
-            
-        </div> -->
+
+        </div>
         <div class="space-div"></div>
     </div>
 </template>
