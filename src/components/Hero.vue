@@ -1,6 +1,6 @@
 <template>
     <section class="hero-container">
-        <h1>Juniorr Full-Stack Web Developer</h1>
+        <h1>Junior Full-Stack Web Developer</h1>
         <h2>I build scalable web applications, turning ideas into seamless experience.</h2>
         <img class="logo-startup" src="./icons/business-startup.png" alt="personal-image">
     </section>
